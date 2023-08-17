@@ -1,12 +1,12 @@
 package com.github.igoraguiar.med.voll.api.controller;
 
 
-import com.github.igoraguiar.med.voll.api.Entity.Address.Address;
-import com.github.igoraguiar.med.voll.api.Entity.Pacient.DTO.PacientDetailData;
-import com.github.igoraguiar.med.voll.api.Entity.Pacient.DTO.PacientListData;
-import com.github.igoraguiar.med.voll.api.Entity.Pacient.DTO.PacientRegisterData;
-import com.github.igoraguiar.med.voll.api.Entity.Pacient.DTO.PacientUpdateData;
-import com.github.igoraguiar.med.voll.api.Entity.Pacient.Pacient;
+import com.github.igoraguiar.med.voll.api.domain.Address.Address;
+import com.github.igoraguiar.med.voll.api.domain.Pacient.DTO.PacientDetailData;
+import com.github.igoraguiar.med.voll.api.domain.Pacient.DTO.PacientListData;
+import com.github.igoraguiar.med.voll.api.domain.Pacient.DTO.PacientRegisterData;
+import com.github.igoraguiar.med.voll.api.domain.Pacient.DTO.PacientUpdateData;
+import com.github.igoraguiar.med.voll.api.domain.Pacient.Pacient;
 import com.github.igoraguiar.med.voll.api.Repositories.PacientRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -73,15 +73,7 @@ public class PacientController {
     @GetMapping("/{id}")
     @Transactional
     ResponseEntity detailPacient(@PathVariable Long id){
-        try{
             var pacientFound = pacientRepository.getReferenceById(id);
             return ResponseEntity.ok(new PacientDetailData(pacientFound));
-        } catch (Exception e){
-            return ResponseEntity.notFound().build();
-        }
     }
-
-
-
-
 }

@@ -1,6 +1,6 @@
-package com.github.igoraguiar.med.voll.api.Entity.Pacient.DTO;
+package com.github.igoraguiar.med.voll.api.domain.Pacient.DTO;
 
-import com.github.igoraguiar.med.voll.api.Entity.Pacient.Pacient;
+import com.github.igoraguiar.med.voll.api.domain.Pacient.Pacient;
 
 public record PacientListData(String name,
                               String email,

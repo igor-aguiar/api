@@ -1,4 +1,4 @@
-package com.github.igoraguiar.med.voll.api.Entity.Address.DTO;
+package com.github.igoraguiar.med.voll.api.domain.Address.DTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

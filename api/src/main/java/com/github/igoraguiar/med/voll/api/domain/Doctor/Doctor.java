@@ -1,8 +1,7 @@
-package com.github.igoraguiar.med.voll.api.Entity.Doctor;
+package com.github.igoraguiar.med.voll.api.domain.Doctor;
 
-import com.github.igoraguiar.med.voll.api.Entity.Address.Address;
-import com.github.igoraguiar.med.voll.api.Entity.Address.DTO.AddressRegisterData;
-import com.github.igoraguiar.med.voll.api.Entity.Doctor.DTO.DoctorUpdateData;
+import com.github.igoraguiar.med.voll.api.domain.Address.Address;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.DTO.DoctorUpdateData;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,11 +1,11 @@
 package com.github.igoraguiar.med.voll.api.controller;
 
-import com.github.igoraguiar.med.voll.api.Entity.Address.Address;
-import com.github.igoraguiar.med.voll.api.Entity.Doctor.DTO.DoctorDatailedData;
-import com.github.igoraguiar.med.voll.api.Entity.Doctor.DTO.DoctorRegisterData;
-import com.github.igoraguiar.med.voll.api.Entity.Doctor.DTO.DoctorUpdateData;
-import com.github.igoraguiar.med.voll.api.Entity.Doctor.DTO.ListDoctorsData;
-import com.github.igoraguiar.med.voll.api.Entity.Doctor.Doctor;
+import com.github.igoraguiar.med.voll.api.domain.Address.Address;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.DTO.DoctorDatailedData;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.DTO.DoctorRegisterData;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.DTO.DoctorUpdateData;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.DTO.ListDoctorsData;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.Doctor;
 import com.github.igoraguiar.med.voll.api.Repositories.DoctorRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -14,11 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriBuilderFactory;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.net.http.HttpResponse;
-import java.util.List;
 
 @RestController
 @RequestMapping("doctor")

@@ -1,7 +1,7 @@
-package com.github.igoraguiar.med.voll.api.Entity.Doctor.DTO;
+package com.github.igoraguiar.med.voll.api.domain.Doctor.DTO;
 
-import com.github.igoraguiar.med.voll.api.Entity.Doctor.Doctor;
-import com.github.igoraguiar.med.voll.api.Entity.Doctor.Specialization;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.Doctor;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.Specialization;
 
 public record ListDoctorsData(Long id,
                               String name,

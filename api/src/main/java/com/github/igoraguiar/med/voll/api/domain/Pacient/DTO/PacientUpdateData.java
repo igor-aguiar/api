@@ -1,7 +1,6 @@
-package com.github.igoraguiar.med.voll.api.Entity.Pacient.DTO;
+package com.github.igoraguiar.med.voll.api.domain.Pacient.DTO;
 
-import com.github.igoraguiar.med.voll.api.Entity.Address.DTO.AddressRegisterData;
-import jakarta.validation.constraints.NotBlank;
+import com.github.igoraguiar.med.voll.api.domain.Address.DTO.AddressRegisterData;
 import jakarta.validation.constraints.NotNull;
 
 public record PacientUpdateData(@NotNull Long id,

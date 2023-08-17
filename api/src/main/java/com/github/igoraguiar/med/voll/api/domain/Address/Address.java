@@ -1,6 +1,6 @@
-package com.github.igoraguiar.med.voll.api.Entity.Address;
+package com.github.igoraguiar.med.voll.api.domain.Address;
 
-import com.github.igoraguiar.med.voll.api.Entity.Address.DTO.AddressRegisterData;
+import com.github.igoraguiar.med.voll.api.domain.Address.DTO.AddressRegisterData;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,7 +1,7 @@
-package com.github.igoraguiar.med.voll.api.Entity.Doctor.DTO;
+package com.github.igoraguiar.med.voll.api.domain.Doctor.DTO;
 
-import com.github.igoraguiar.med.voll.api.Entity.Address.DTO.AddressRegisterData;
-import com.github.igoraguiar.med.voll.api.Entity.Doctor.Specialization;
+import com.github.igoraguiar.med.voll.api.domain.Address.DTO.AddressRegisterData;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.Specialization;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

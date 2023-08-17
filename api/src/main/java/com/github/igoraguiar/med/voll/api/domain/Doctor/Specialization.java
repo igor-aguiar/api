@@ -1,4 +1,4 @@
-package com.github.igoraguiar.med.voll.api.Entity.Doctor;
+package com.github.igoraguiar.med.voll.api.domain.Doctor;
 
 public enum Specialization {
     ORTOPEDY,
