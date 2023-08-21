@@ -1,4 +1,4 @@
-package com.github.igoraguiar.med.voll.api.Repositories;
+package com.github.igoraguiar.med.voll.api.domain.Pacient.repository;
 
 import com.github.igoraguiar.med.voll.api.domain.Pacient.Pacient;
 import org.springframework.data.domain.Page;

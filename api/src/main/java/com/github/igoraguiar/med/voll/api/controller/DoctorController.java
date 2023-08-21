@@ -6,7 +6,7 @@ import com.github.igoraguiar.med.voll.api.domain.Doctor.DTO.DoctorRegisterData;
 import com.github.igoraguiar.med.voll.api.domain.Doctor.DTO.DoctorUpdateData;
 import com.github.igoraguiar.med.voll.api.domain.Doctor.DTO.ListDoctorsData;
 import com.github.igoraguiar.med.voll.api.domain.Doctor.Doctor;
-import com.github.igoraguiar.med.voll.api.Repositories.DoctorRepository;
+import com.github.igoraguiar.med.voll.api.domain.Doctor.repository.DoctorRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
