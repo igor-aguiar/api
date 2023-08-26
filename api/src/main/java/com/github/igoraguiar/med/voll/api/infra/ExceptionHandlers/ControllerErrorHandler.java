@@ -1,4 +1,4 @@
-package com.github.igoraguiar.med.voll.api.infra;
+package com.github.igoraguiar.med.voll.api.infra.ExceptionHandlers;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
