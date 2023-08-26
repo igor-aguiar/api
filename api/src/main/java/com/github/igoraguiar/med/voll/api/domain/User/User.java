@@ -1,5 +1,6 @@
 package com.github.igoraguiar.med.voll.api.domain.User;
 
+import com.github.igoraguiar.med.voll.api.domain.User.DTO.UserDataLogin;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,7 +25,12 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String pass;
+    private String password;
+
+    public User(UserDataLogin user){
+        this.name = user.login();
+        this.password = user.password();
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -38,7 +44,7 @@ public class User implements UserDetails {
 
     @Override
     public String getPassword(){
-        return this.pass;
+        return this.password;
     }
 
     @Override
