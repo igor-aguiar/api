@@ -25,10 +25,10 @@ public class SecurityConfigurations{
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.csrf(csrf -> csrf.disable())
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(request -> {
-                    request.requestMatchers(HttpMethod.POST, "/login").permitAll();
-                    request.anyRequest().authenticated();
-                })
+                .authorizeHttpRequests(req -> req
+                    .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                    .anyRequest().authenticated()
+                )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
