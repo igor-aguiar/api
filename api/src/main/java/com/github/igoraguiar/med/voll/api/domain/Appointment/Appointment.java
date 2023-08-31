@@ -1,5 +1,6 @@
 package com.github.igoraguiar.med.voll.api.domain.Appointment;
 
+import com.github.igoraguiar.med.voll.api.domain.Appointment.DTO.CancellationReason;
 import com.github.igoraguiar.med.voll.api.domain.Doctor.Doctor;
 import com.github.igoraguiar.med.voll.api.domain.Pacient.Pacient;
 import jakarta.persistence.*;
@@ -29,4 +30,12 @@ public class Appointment {
     private Doctor doctorId;
 
     private LocalDateTime data;
+
+    @Column(name = "cancellation_reason")
+    @Enumerated(EnumType.STRING)
+    private CancellationReason cancellationReason;
+
+    public void cancel(CancellationReason reason) {
+        this.cancellationReason = reason;
+    }
 }

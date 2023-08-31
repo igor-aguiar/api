@@ -2,6 +2,7 @@ package com.github.igoraguiar.med.voll.api.controller;
 
 import com.github.igoraguiar.med.voll.api.domain.Appointment.DTO.AppointmentData;
 import com.github.igoraguiar.med.voll.api.domain.Appointment.DTO.AppointmentDataDetail;
+import com.github.igoraguiar.med.voll.api.domain.Appointment.DTO.CancellationReasonData;
 import com.github.igoraguiar.med.voll.api.domain.Appointment.ScheduleAppointment;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -23,9 +24,10 @@ public class AppointmentController {
         return ResponseEntity.ok(appointment);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity deleteAppointment(@PathVariable Long id){
-        scheduleAppointment.delete(id);
+    @DeleteMapping
+    @Transactional
+    public ResponseEntity deleteAppointment(@RequestBody @Valid CancellationReasonData data ){
+        scheduleAppointment.delete(data);
         return ResponseEntity.noContent().build();
     }
 }
